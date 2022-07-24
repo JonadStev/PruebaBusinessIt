@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "4e50f3eb-2cbe-4fb9-8705-1ee6deab25c8",
+		"name": "PruebaBusinessIt",
+		"description": "Captura de las pruebas postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/clientes/crear",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jonathan\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 27,\r\n    \"identificacion\": \"0953768976\",\r\n    \"direccion\": \"Calle 11\",\r\n    \"telefono\": \"0978654321\",\r\n    \"contraseña\": \"prueba\",\r\n    \"estado\": \"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/clientes/actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5,\r\n    \"nombre\": \"Jonathan Burgos\",\r\n    \"genero\": \"Masculino\",\r\n    \"edad\": 27,\r\n    \"identificacion\": \"0953768976\",\r\n    \"direccion\": \"Calle 11\",\r\n    \"telefono\": \"0978654321\",\r\n    \"contraseña\": \"prueba\",\r\n    \"estado\": \"activo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/clientes/eliminar/5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes/eliminar/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"eliminar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cuentas/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCuenta\":\"099987663\",\r\n    \"tipoCuenta\":\"ahorros\",\r\n    \"saldoInicial\":3000,\r\n    \"estado\":\"activo\",\r\n    \"idCliente\":6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cuentas/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cuentas",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cuentas/actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 6,\r\n    \"numeroCuenta\": \"12345322\",\r\n    \"tipoCuenta\": \"corriente\",\r\n    \"saldoInicial\": 120,\r\n    \"estado\": \"activo\",\r\n    \"idCliente\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cuentas/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cuentas",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/cuentas/eliminar/6",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/cuentas/eliminar/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cuentas",
+						"eliminar",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movimientos/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"26/07/2022\",\r\n    \"tipoMovimiento\": \"debito\",\r\n    \"valor\": 2000,\r\n    \"idCuenta\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/movimientos/crear",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movimientos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movimientos/reportes?fechaInicio=24/07/2022&fechaFinal=25/07/2022&idCliente=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movimientos/reportes?fechaInicio=24/07/2022&fechaFinal=25/07/2022&idCliente=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movimientos",
+						"reportes"
+					],
+					"query": [
+						{
+							"key": "fechaInicio",
+							"value": "24/07/2022"
+						},
+						{
+							"key": "fechaFinal",
+							"value": "25/07/2022"
+						},
+						{
+							"key": "idCliente",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/movimientos/eliminar/28",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/movimientos/eliminar/28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"movimientos",
+						"eliminar",
+						"28"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
